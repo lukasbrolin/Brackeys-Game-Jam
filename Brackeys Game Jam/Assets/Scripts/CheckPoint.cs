@@ -5,18 +5,20 @@ using UnityEngine;
 public class CheckPoint : MonoBehaviour
 {
     [SerializeField]
-    private SpriteRenderer theSR;
+    private SpriteRenderer spriteRenderer;
 
     [SerializeField]
     private Sprite cpOn, cpOff;
 
     private void OnTriggerEnter2D(Collider2D other)
     {
+        Debug.Log(other);
         if (other.CompareTag("Player"))
         {
+            Debug.Log("Match");
             CheckPointManager.Instance.DeactivateCheckpoints();
 
-            theSR.sprite = cpOn;
+            spriteRenderer.sprite = cpOn;
 
             CheckPointManager.Instance.SetSpawnPoint(transform.position);
         }
@@ -24,6 +26,6 @@ public class CheckPoint : MonoBehaviour
 
     public void ResetCheckpoint()
     {
-        theSR.sprite = cpOff;
+        spriteRenderer.sprite = cpOff;
     }
 }

@@ -53,4 +53,14 @@ public class LevelManager : MonoBehaviour
         PlayerMovement.Instance.transform.position = CheckPointManager.Instance.spawnPoint;
 
     }
+
+    public void EndLevel()
+    {
+        StartCoroutine(EndLevelCo());
+    }
+
+    public IEnumerator EndLevelCo()
+    {
+        yield return new WaitForSeconds(2f);
+    }
 }

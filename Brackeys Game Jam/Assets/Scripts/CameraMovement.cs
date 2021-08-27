@@ -51,7 +51,6 @@ public class CameraMovement : MonoBehaviour
     {
         Vector3 playerPos = PlayerMovement.Instance.transform.position;
         Vector3 playerPosWorld = Camera.main.WorldToViewportPoint(playerPos);
-        Debug.Log(playerPosWorld);
         if (playerPosWorld.x > 0.8f && !doubleSpeed)
         {
             while (moveSpeed <= increasedSpeed)

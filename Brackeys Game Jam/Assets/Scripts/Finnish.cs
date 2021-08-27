@@ -8,7 +8,7 @@ public class Finnish : MonoBehaviour
     {
         if (collision.tag.Equals("Player"))
         {
-            Debug.Log("YOU WIN");
+            LevelManager.Instance.EndLevel();
         }
     }
 }
