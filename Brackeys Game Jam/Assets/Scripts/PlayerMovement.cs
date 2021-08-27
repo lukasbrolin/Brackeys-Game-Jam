@@ -8,6 +8,7 @@ using UnityEngine.UI;
 
 public class PlayerMovement : MonoBehaviour
 {
+    [Header("FMOD")]
     [FMODUnity.EventRef]
     [SerializeField]
     private string jumpEvent;
@@ -59,6 +60,7 @@ public class PlayerMovement : MonoBehaviour
     private bool doubleJumpRequest;
     private bool isGrounded;
     private bool hasLanded;
+    public bool stopInput;
 
     
     //Components
@@ -106,20 +108,28 @@ public class PlayerMovement : MonoBehaviour
 
     void Update()
     {
-        switch (state)
+        if (!stopInput)
         {
-            case State.Normal:
-                CheckMovement(keyCodes[1], keyCodes[2]);
-                JumpRequest(keyCodes[0]);
-                break;
-            case State.Glitching:
-                CheckMovement(keyCodesRandomized[1], keyCodesRandomized[2]);
-                JumpRequest(keyCodesRandomized[0]);
-                break;
+            switch (state)
+            {
+                case State.Normal:
+                    CheckMovement(keyCodes[1], keyCodes[2]);
+                    JumpRequest(keyCodes[0]);
+                    break;
+                case State.Glitching:
+                    CheckMovement(keyCodesRandomized[1], keyCodesRandomized[2]);
+                    JumpRequest(keyCodesRandomized[0]);
+                    break;
+            }
+            GroundCheck();
+            CheckFacing();
+            CheckVertical();
         }
-        GroundCheck();
-        CheckFacing();
-        CheckVertical();
+        else
+        {
+            direction = 0;
+        }
+        
     }
 
     private void FixedUpdate()
@@ -134,7 +144,6 @@ public class PlayerMovement : MonoBehaviour
                 break;
         }
         Movement();
-        //Jump();
     }
 
     public void SetGlitching()
@@ -157,8 +166,6 @@ public class PlayerMovement : MonoBehaviour
 
     void CheckMovement(string left, string right)
     {
-        //direction =isGlitching? Input.GetAxisRaw("Horizontal")*-1: Input.GetAxisRaw("Horizontal");
-
         if ((Input.GetKey(right) && Input.GetKey(left)) || (!Input.GetKey(right) && !Input.GetKey(left)))
         {
             direction = -0;

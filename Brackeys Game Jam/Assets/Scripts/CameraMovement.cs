@@ -22,6 +22,9 @@ public class CameraMovement : MonoBehaviour
     [SerializeField]
     private bool isMoving;
 
+    public bool stopFollow;
+    public bool centerPlayer;
+
     private void Awake()
     {
         if (_instance != null && _instance != this)
@@ -43,8 +46,12 @@ public class CameraMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        DampMove();
-        Move();
+        if (!stopFollow)
+        {
+            DampMove();
+            Move();
+        }
+        CenterPlayer();
     }
 
     void DampMove()
@@ -74,6 +81,15 @@ public class CameraMovement : MonoBehaviour
             Vector3 position = transform.position;
             position.y = Mathf.Clamp(PlayerMovement.Instance.transform.position.y, minHeight, maxHeight);
             transform.position = position;
+        }
+    }
+
+    public void CenterPlayer()
+    {
+        if (centerPlayer)
+        {
+            Vector3 playerPos = new Vector3(PlayerMovement.Instance.transform.position.x, transform.position.y, transform.position.z);
+            transform.position = Vector3.MoveTowards(transform.position, playerPos, moveSpeed * Time.deltaTime);
         }
     }
 

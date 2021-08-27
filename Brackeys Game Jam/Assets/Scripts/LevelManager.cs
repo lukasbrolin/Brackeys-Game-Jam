@@ -61,6 +61,14 @@ public class LevelManager : MonoBehaviour
 
     public IEnumerator EndLevelCo()
     {
-        yield return new WaitForSeconds(2f);
+        PlayerMovement.Instance.stopInput = true;
+
+        CameraMovement.Instance.stopFollow = true;
+
+        CameraMovement.Instance.centerPlayer = true;
+
+        yield return new WaitForSeconds(1.5f);
+
+
     }
 }
