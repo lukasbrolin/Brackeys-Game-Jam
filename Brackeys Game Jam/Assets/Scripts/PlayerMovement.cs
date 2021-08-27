@@ -13,6 +13,9 @@ public class PlayerMovement : MonoBehaviour
     private string jumpEvent;
     [FMODUnity.EventRef]
     [SerializeField]
+    private string landingEvent;
+    [FMODUnity.EventRef]
+    [SerializeField]
     private string takeDamageEvent;
     [FMODUnity.EventRef]
     [SerializeField]
@@ -55,6 +58,8 @@ public class PlayerMovement : MonoBehaviour
     private bool jumpRequest;
     private bool doubleJumpRequest;
     private bool isGrounded;
+    private bool hasLanded;
+
     
     //Components
     private Rigidbody2D rb;
@@ -114,6 +119,7 @@ public class PlayerMovement : MonoBehaviour
         }
         GroundCheck();
         CheckFacing();
+        CheckVertical();
     }
 
     private void FixedUpdate()
@@ -168,6 +174,29 @@ public class PlayerMovement : MonoBehaviour
         animator.SetFloat("Horizontal", direction);
     }
 
+    void CheckVertical()
+    {
+        Debug.Log(Mathf.Round(rb.velocity.y));
+        if(Mathf.Round(rb.velocity.y) > 0)
+        {
+            hasLanded = false;
+            animator.SetBool("Rising", true);
+            animator.SetBool("Falling", false);
+        }
+        else if (isGrounded || Mathf.Round(rb.velocity.y) == 0)
+        {
+            animator.SetBool("Rising", false);
+            animator.SetBool("Falling", false);
+        }
+        else if(Mathf.Round(rb.velocity.y) < 0)
+        {
+            hasLanded = false;
+            animator.SetBool("Rising", false);
+            animator.SetBool("Falling", true);
+        }
+        
+    }
+
     void Movement()
     {
         if (direction != 0)
@@ -193,11 +222,17 @@ public class PlayerMovement : MonoBehaviour
     void GroundCheck()
     {
         isGrounded = Physics2D.OverlapCircle(groundPos.position, 0.2f, groundLayer);
+        if (!hasLanded && isGrounded && !(rb.velocity.y > 0))
+        {
+            FMODUnity.RuntimeManager.PlayOneShot(landingEvent);
+            hasLanded = true;
+        }
         if (isGrounded)
         {
             DoubleJumpCheck();
         }
     }
+
 
     void DoubleJumpCheck()
     {
@@ -210,6 +245,7 @@ public class PlayerMovement : MonoBehaviour
         {
             if (isGrounded)
             {
+                
                 rb.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
                 jumpRequest = false;
                 FMODUnity.RuntimeManager.PlayOneShot(jumpEvent);
@@ -222,6 +258,7 @@ public class PlayerMovement : MonoBehaviour
                     rb.AddForce(Vector2.up * (jumpForce * 0.8f), ForceMode2D.Impulse);
                     jumpRequest = false;
                     doubleJumpRequest = false;
+                    FMODUnity.RuntimeManager.PlayOneShot(jumpEvent);
                 }
             }
         }
