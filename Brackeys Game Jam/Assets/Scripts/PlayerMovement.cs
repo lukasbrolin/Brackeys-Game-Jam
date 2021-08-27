@@ -13,6 +13,9 @@ public class PlayerMovement : MonoBehaviour
     private string jumpEvent;
     [FMODUnity.EventRef]
     [SerializeField]
+    private string takeDamageEvent;
+    [FMODUnity.EventRef]
+    [SerializeField]
     private string glitchEvent;
     [Range(1,0)]
     private float glitchFloat;
@@ -241,6 +244,11 @@ public class PlayerMovement : MonoBehaviour
     private void OnDrawGizmos()
     {
         Gizmos.DrawWireSphere(groundPos.position, 0.2f);
+    }
+
+    public void TakeDamageSound()
+    {
+        FMODUnity.RuntimeManager.PlayOneShot(takeDamageEvent);
     }
 
     

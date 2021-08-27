@@ -11494,6 +11494,10 @@ PrefabInstance:
       propertyPath: footStepEvent
       value: event:/Player/Footsteps
       objectReference: {fileID: 0}
+    - target: {fileID: 8880601222214681735, guid: 34b347f7bc9c9b643a646b1e9bc230c6, type: 3}
+      propertyPath: takeDamageEvent
+      value: event:/Player/Take_DMG
+      objectReference: {fileID: 0}
     - target: {fileID: 8880601222214681738, guid: 34b347f7bc9c9b643a646b1e9bc230c6, type: 3}
       propertyPath: keyText.Array.data[0]
       value: 
