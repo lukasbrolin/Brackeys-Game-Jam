@@ -33,7 +33,8 @@ public class PlayerGlitch : MonoBehaviour
                     {
                         foreach (TextMeshProUGUI text in keyText)
                         {
-                            text.enabled = false;
+                            text.transform.parent.gameObject.SetActive(false);
+                            //text.enabled = false;
                         }
                         InvokeNormal();
                     }
@@ -43,7 +44,8 @@ public class PlayerGlitch : MonoBehaviour
                     {
                         foreach (TextMeshProUGUI text in keyText)
                         {
-                            text.enabled = false;
+                            text.transform.parent.gameObject.SetActive(false);
+                            //text.enabled = false;
                         }
                         InvokeNormal();
                     }
@@ -53,7 +55,8 @@ public class PlayerGlitch : MonoBehaviour
                     {
                         foreach (TextMeshProUGUI text in keyText)
                         {
-                            text.enabled = false;
+                            text.transform.parent.gameObject.SetActive(false);
+                            //text.enabled = false;
                         }
                         InvokeNormal();
                     }
@@ -67,9 +70,10 @@ public class PlayerGlitch : MonoBehaviour
         selectedKeyCodes = randomizer.Randomize(glitchKeyCodes);
         for (int i = 0; i < level; i++)
         {
-            keyText[i].text = selectedKeyCodes[i];
+            keyText[i].text = selectedKeyCodes[i].ToUpper(); ;
             Debug.Log(keyText[i]);
-            keyText[i].enabled = true;
+            //keyText[i].enabled = true;
+            keyText[i].transform.parent.gameObject.SetActive(true);
         }
 
 
