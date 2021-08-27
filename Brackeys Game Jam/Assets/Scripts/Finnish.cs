@@ -9,7 +9,6 @@ public class Finnish : MonoBehaviour
         if (collision.tag.Equals("Player"))
         {
             LevelManager.Instance.EndLevel();
-            CameraMovement.Instance.stopFollow = true;
         }
     }
 

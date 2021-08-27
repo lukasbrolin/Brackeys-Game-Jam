@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class LevelManager : MonoBehaviour
 {
@@ -52,6 +53,10 @@ public class LevelManager : MonoBehaviour
 
         PlayerMovement.Instance.transform.position = CheckPointManager.Instance.spawnPoint;
 
+        CameraMovement.Instance.transform.position = CameraMovement.Instance.CameraPos();
+
+        CameraMovement.Instance.Resume();
+
     }
 
     public void EndLevel()
@@ -69,6 +74,7 @@ public class LevelManager : MonoBehaviour
 
         yield return new WaitForSeconds(1.5f);
 
+        SceneManager.LoadScene(levelToLoad);
 
     }
 }

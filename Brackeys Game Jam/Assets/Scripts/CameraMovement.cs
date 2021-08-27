@@ -18,6 +18,8 @@ public class CameraMovement : MonoBehaviour
     private bool doubleSpeed;
     [SerializeField]
     private float minHeight, maxHeight;
+    [SerializeField]
+    public Vector3 startPos;
 
     [SerializeField]
     private bool isMoving;
@@ -40,7 +42,8 @@ public class CameraMovement : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        transform.position = new Vector3(PlayerMovement.Instance.transform.position.x, Mathf.Clamp(PlayerMovement.Instance.transform.position.y, minHeight, maxHeight),transform.position.z);
+        startPos = CameraPos();
+        transform.position = startPos;
     }
 
     // Update is called once per frame
@@ -96,5 +99,15 @@ public class CameraMovement : MonoBehaviour
     public void Stop()
     {
         isMoving = false;
+    }
+
+    public void Resume()
+    {
+        isMoving = true;
+    }
+
+    public Vector3 CameraPos()
+    {
+        return new Vector3(PlayerMovement.Instance.transform.position.x, Mathf.Clamp(PlayerMovement.Instance.transform.position.y, minHeight, maxHeight), transform.position.z);
     }
 }

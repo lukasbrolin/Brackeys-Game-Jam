@@ -128,6 +128,7 @@ public class PlayerMovement : MonoBehaviour
         else
         {
             direction = 0;
+            animator.SetFloat("Horizontal", 0);
         }
         
     }
