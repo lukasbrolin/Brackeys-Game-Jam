@@ -8,8 +8,14 @@ public class CameraMovement : MonoBehaviour
 
     public static CameraMovement Instance { get { return _instance; } }
 
+    
+    [SerializeField]
+    private float increasedSpeed;
+    [SerializeField]
+    private float normalSpeed;
     [SerializeField]
     private float moveSpeed;
+    private bool doubleSpeed;
     [SerializeField]
     private float minHeight, maxHeight;
 
@@ -37,13 +43,37 @@ public class CameraMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        DampMove();
+        Move();
+    }
+
+    void DampMove()
+    {
+        Vector3 playerPos = PlayerMovement.Instance.transform.position;
+        Vector3 playerPosWorld = Camera.main.WorldToViewportPoint(playerPos);
+        Debug.Log(playerPosWorld);
+        if (playerPosWorld.x > 0.8f && !doubleSpeed)
+        {
+            while (moveSpeed <= increasedSpeed)
+                moveSpeed += increasedSpeed * Time.deltaTime;
+            doubleSpeed = true;
+        }
+        else if (playerPosWorld.x < 0.8f && doubleSpeed)
+        {
+            while (moveSpeed >= normalSpeed)
+                moveSpeed -= normalSpeed * Time.deltaTime;
+            doubleSpeed = false;
+        }
+    }
+
+    void Move()
+    {
         if (isMoving)
         {
             moveSpeed += 0.05f * Time.deltaTime;
             transform.position = new Vector3(transform.position.x + (moveSpeed * Time.deltaTime), transform.position.y, transform.position.z);
             Vector3 position = transform.position;
             position.y = Mathf.Clamp(PlayerMovement.Instance.transform.position.y, minHeight, maxHeight);
-            //position.x = PlayerMovement.Instance.transform.position.x;
             transform.position = position;
         }
     }
