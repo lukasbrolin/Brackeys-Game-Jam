@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.01.00">
+	<object class="AudioFile" id="{928d60f6-6798-49e9-8d96-6940a856d838}">
+		<property name="assetPath">
+			<value>AMBX_City_Emitter_7.wav</value>
+		</property>
+		<property name="isStreaming">
+			<value>true</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>1</value>
+		</property>
+		<property name="length">
+			<value>12.960000000000001</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{8d040614-f485-4743-85e1-e8aca651db43}</destination>
+		</relationship>
+	</object>
+</objects>

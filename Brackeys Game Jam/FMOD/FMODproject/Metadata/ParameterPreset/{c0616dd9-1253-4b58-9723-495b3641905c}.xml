@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.01.00">
+	<object class="ParameterPreset" id="{c0616dd9-1253-4b58-9723-495b3641905c}">
+		<property name="name">
+			<value>IsGlitching</value>
+		</property>
+		<relationship name="folder">
+			<destination>{3d98e168-71c0-4466-adb0-2bf470ec2a33}</destination>
+		</relationship>
+		<relationship name="parameter">
+			<destination>{bb80828e-e436-4072-ae3c-a6597bedacd2}</destination>
+		</relationship>
+	</object>
+	<object class="GameParameter" id="{bb80828e-e436-4072-ae3c-a6597bedacd2}">
+		<property name="parameterType">
+			<value>2</value>
+		</property>
+		<property name="maximum">
+			<value>2</value>
+		</property>
+		<property name="enumerationLabels">
+			<value>Yes</value>
+			<value>No</value>
+		</property>
+		<property name="initialValue">
+			<value>0</value>
+		</property>
+	</object>
+</objects>
