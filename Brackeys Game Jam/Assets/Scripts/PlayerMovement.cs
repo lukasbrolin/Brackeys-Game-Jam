@@ -8,6 +8,16 @@ using UnityEngine.UI;
 
 public class PlayerMovement : MonoBehaviour
 {
+    [FMODUnity.EventRef]
+    [SerializeField]
+    private string jumpEvent;
+    [FMODUnity.EventRef]
+    [SerializeField]
+    private string glitchEvent;
+    [Range(1,0)]
+    private float glitchFloat;
+    private FMOD.Studio.EventInstance glitchEffectEvent;
+
     //Movement
     [Header("Movement")]
     [SerializeField]
@@ -121,12 +131,19 @@ public class PlayerMovement : MonoBehaviour
     public void SetGlitching()
     {
         state = State.Glitching;
+        glitchFloat = 0;
+        glitchEffectEvent = FMODUnity.RuntimeManager.CreateInstance(glitchEvent);
+        glitchEffectEvent.setParameterByName("IsGlitching", glitchFloat);
+        glitchEffectEvent.start();
         keyCodesRandomized = randomizer.Randomize(keyCodes);
         SetGlitchedCompleted?.Invoke();
     }
     public void SetNormal()
     {
         state = State.Normal;
+        glitchFloat = 1;
+        glitchEffectEvent.setParameterByName("IsGlitching", glitchFloat);
+        glitchEffectEvent.release();
     }
 
     void CheckMovement(string left, string right)
@@ -192,6 +209,7 @@ public class PlayerMovement : MonoBehaviour
             {
                 rb.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
                 jumpRequest = false;
+                FMODUnity.RuntimeManager.PlayOneShot(jumpEvent);
             }
             else
             {
@@ -224,6 +242,8 @@ public class PlayerMovement : MonoBehaviour
     {
         Gizmos.DrawWireSphere(groundPos.position, 0.2f);
     }
+
+    
 
 }
 

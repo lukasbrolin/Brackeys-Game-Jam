@@ -11,4 +11,6 @@ public class Finnish : MonoBehaviour
             LevelManager.Instance.EndLevel();
         }
     }
+
+    
 }
