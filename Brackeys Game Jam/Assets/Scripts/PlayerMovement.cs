@@ -147,6 +147,20 @@ public class PlayerMovement : MonoBehaviour
         Movement();
     }
 
+    private bool CheckKeys()
+    {
+        int counter = 0;
+        for(int i = 0; i <= keyCodes.Length -1; i++)
+        {
+            if (keyCodes[i] == keyCodesRandomized[i])
+                counter++;
+        }
+        if (counter == 3)
+            return false;
+        else
+            return true;
+    }
+
     public void SetGlitching()
     {
         state = State.Glitching;
@@ -155,6 +169,10 @@ public class PlayerMovement : MonoBehaviour
         glitchEffectEvent.setParameterByName("IsGlitching", glitchFloat);
         glitchEffectEvent.start();
         keyCodesRandomized = randomizer.Randomize(keyCodes);
+        while (!CheckKeys())
+        {
+            keyCodesRandomized = randomizer.Randomize(keyCodes);
+        }
         SetGlitchedCompleted?.Invoke();
     }
     public void SetNormal()
@@ -184,7 +202,6 @@ public class PlayerMovement : MonoBehaviour
 
     void CheckVertical()
     {
-        Debug.Log(Mathf.Round(rb.velocity.y));
         if(Mathf.Round(rb.velocity.y) > 0)
         {
             hasLanded = false;
