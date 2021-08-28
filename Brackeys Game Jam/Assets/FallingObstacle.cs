@@ -7,8 +7,11 @@ public class FallingObstacle : MonoBehaviour
     [SerializeField]
     private LayerMask groundLayer;
 
-    private Vector3 lastPos;
+    [FMODUnity.EventRef]
+    [SerializeField]
+    private string bumpEvent;
 
+    private Vector3 lastPos;
     private bool isGrounded;
     public bool isFalling;
     private Rigidbody2D rb;
@@ -48,10 +51,15 @@ public class FallingObstacle : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
+        if (collision.gameObject.CompareTag("Ground"))
+        {
+            FMODUnity.RuntimeManager.PlayOneShot(bumpEvent);
+        }
         if (!isGrounded && isFalling)
         {
             if (collision.gameObject.CompareTag("Player"))
             {
+                FMODUnity.RuntimeManager.PlayOneShot(bumpEvent);
                 PlayerMovement.Instance.TakeDamageSound();
                 LevelManager.Instance.RespawnPlayer();
                 Debug.Log("Carrot Hit");
