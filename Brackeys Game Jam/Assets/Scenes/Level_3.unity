@@ -539,6 +539,10 @@ PrefabInstance:
       propertyPath: m_LocalPosition.x
       value: -24.61
       objectReference: {fileID: 0}
+    - target: {fileID: 2744934359254673840, guid: 888a2a4c3b3663e4b88cb295de7ec36d, type: 3}
+      propertyPath: moveSpeed
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 2744934359254673841, guid: 888a2a4c3b3663e4b88cb295de7ec36d, type: 3}
       propertyPath: m_Name
       value: MovingPlatform
@@ -606,7 +610,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2744934359254673840, guid: 888a2a4c3b3663e4b88cb295de7ec36d, type: 3}
       propertyPath: moveSpeed
-      value: 4
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 2744934359254673841, guid: 888a2a4c3b3663e4b88cb295de7ec36d, type: 3}
       propertyPath: m_Name
@@ -29432,6 +29436,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 148662502386668071, guid: b09de9e20e08ad5458c83ce200f98196, type: 3}
+      propertyPath: increasedSpeed
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2242476588730019136, guid: b09de9e20e08ad5458c83ce200f98196, type: 3}
+      propertyPath: level
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 2242476588828424413, guid: b09de9e20e08ad5458c83ce200f98196, type: 3}
       propertyPath: m_LocalPosition.x
       value: 90.89

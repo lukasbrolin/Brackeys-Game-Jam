@@ -47,8 +47,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cpEvent: event:/UI/Checkpoint
   spriteRenderer: {fileID: 8693243359484351348}
-  cpOn: {fileID: -3171507796359171452, guid: a9e5ef2d769118e4ba5b2fe4d07506d6, type: 3}
-  cpOff: {fileID: -2413806693520163455, guid: ebe73ca9363db456bacf42c025bb4847, type: 3}
+  cpOn: {fileID: 6229554134440480486, guid: b1cbd7f466d9f3242b9f49bacc12451c, type: 3}
+  cpOff: {fileID: 4023343186106570384, guid: b1cbd7f466d9f3242b9f49bacc12451c, type: 3}
 --- !u!58 &8693243359484351349
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -105,7 +105,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 4
-  m_Sprite: {fileID: -2413806693520163455, guid: ebe73ca9363db456bacf42c025bb4847, type: 3}
+  m_Sprite: {fileID: 4023343186106570384, guid: b1cbd7f466d9f3242b9f49bacc12451c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0

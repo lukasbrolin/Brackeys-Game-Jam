@@ -9,11 +9,32 @@ public class MainMenu : MonoBehaviour
     [SerializeField]
     private string startScene;
     [SerializeField]
-    private Text highScore;
+    private Text highScoreLevel1;
+    [SerializeField]
+    private Text highScoreLevel2;
+    [SerializeField]
+    private Text highScoreLevel3;
+
+    private float sum;
 
     private void Update()
     {
-        highScore.text = PlayerPrefs.GetFloat("Game" + "_time").ToString();
+        if (PlayerPrefs.GetFloat("Level_1" + "_time") != null)
+        {
+            sum += PlayerPrefs.GetFloat("Level_1" + "_time");
+        }
+        else if(PlayerPrefs.GetFloat("Level_2" + "_time") != null)
+        {
+            sum += PlayerPrefs.GetFloat("Level_2" + "_time");
+        }
+        else if (PlayerPrefs.GetFloat("Level_3" + "_time") != null)
+        {
+            sum += PlayerPrefs.GetFloat("Level_3" + "_time");
+        }
+        highScoreLevel1.text = PlayerPrefs.GetFloat("Level_1" + "_time").ToString();
+        highScoreLevel2.text = PlayerPrefs.GetFloat("Level_2" + "_time").ToString();
+        highScoreLevel3.text = PlayerPrefs.GetFloat("Level_3" + "_time").ToString();
+
     }
     public void Play()
     {

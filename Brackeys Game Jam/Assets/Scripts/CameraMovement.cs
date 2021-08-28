@@ -58,8 +58,6 @@ public class CameraMovement : MonoBehaviour
         {
             DampMove();
             Move();
-            
-
         }
         BackgroundFollow();
         CenterPlayer();

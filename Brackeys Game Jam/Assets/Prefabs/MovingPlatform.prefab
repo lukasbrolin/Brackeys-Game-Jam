@@ -72,7 +72,7 @@ GameObject:
   - component: {fileID: 2744934359254673840}
   m_Layer: 0
   m_Name: MovingPlatform
-  m_TagString: Untagged
+  m_TagString: MovingPlatform
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -151,6 +151,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2744934359254673843}
     m_Modifications:
+    - target: {fileID: 1611098929389788193, guid: 4df2a8ee82b527941b8516b22fed7915, type: 3}
+      propertyPath: m_TagString
+      value: MovingPlatform
+      objectReference: {fileID: 0}
     - target: {fileID: 4828495202050340708, guid: 4df2a8ee82b527941b8516b22fed7915, type: 3}
       propertyPath: m_RootOrder
       value: 0
