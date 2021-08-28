@@ -7,6 +7,7 @@ TagManager:
   - Platform
   - Ground
   - MovingPlatform
+  - Sound
   layers:
   - Default
   - TransparentFX

@@ -20,6 +20,29 @@ MonoBehaviour:
     data1: 0
     data2: 0
   Exists: 1
+--- !u!114 &-8650750399473050677
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Player/PlayerFallblockHit
+  m_EditorClassIdentifier: 
+  Path: event:/Player/PlayerFallblockHit
+  guid: 98b499efe71eee40b50cfeb5d7f9590d
+  Banks:
+  - {fileID: 1401611157603682647}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 240
 --- !u!114 &-8398242200133122633
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -149,7 +172,7 @@ MonoBehaviour:
   Is3D: 1
   IsOneShot: 0
   Parameters:
-  - {fileID: -7711625515177851170}
+  - {fileID: 9141093640552046081}
   MinDistance: 0
   MaxDistance: 0
   Length: 6000
@@ -280,11 +303,11 @@ MonoBehaviour:
   Path: FMOD/FMODproject/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 637657664419012703
+  lastModified: 637657711142642195
   LoadResult: 0
   FileSizes:
   - Name: Desktop
-    Value: 1476
+    Value: 1578
   Exists: 1
 --- !u!114 &-2557788219958219187
 MonoBehaviour:
@@ -306,8 +329,8 @@ MonoBehaviour:
   Is3D: 0
   IsOneShot: 0
   Parameters:
-  - {fileID: 3592369073148922884}
-  - {fileID: -4432819497201212443}
+  - {fileID: 6619945583607020250}
+  - {fileID: 3993082918360506777}
   MinDistance: 0
   MaxDistance: 0
   Length: 84571
@@ -450,12 +473,14 @@ MonoBehaviour:
   - {fileID: -3994014869683860673}
   - {fileID: -3585800135017952033}
   - {fileID: -5103168008269095948}
+  - {fileID: -8650750399473050677}
+  - {fileID: 7124774587341140112}
   EditorParameters: []
   MasterBanks:
   - {fileID: 1401611157603682647}
   StringsBanks:
   - {fileID: -3258137026613632129}
-  stringsBankWriteTime: 637657664419012703
+  stringsBankWriteTime: 637657711142642195
   cacheVersion: 6
 --- !u!114 &325376642126127215
 MonoBehaviour:
@@ -515,7 +540,7 @@ MonoBehaviour:
   Path: FMOD/FMODproject/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 637657664418304598
+  lastModified: 637657711142602302
   LoadResult: 0
   FileSizes: []
   Exists: 1
@@ -628,6 +653,26 @@ MonoBehaviour:
     data1: 0
     data2: 0
   Exists: 1
+--- !u!114 &3993082918360506777
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Music/MusicVolume
+  m_EditorClassIdentifier: 
+  Name: MusicVolume
+  Min: 0
+  Max: 1
+  Default: 0.5
+  ID:
+    data1: 0
+    data2: 0
+  Exists: 1
 --- !u!114 &5220254172544747524
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -697,6 +742,26 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 280
+--- !u!114 &6619945583607020250
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Music/MusicParts
+  m_EditorClassIdentifier: 
+  Name: MusicParts
+  Min: 0
+  Max: 3
+  Default: 0
+  ID:
+    data1: 0
+    data2: 0
+  Exists: 1
 --- !u!114 &6835631856679936860
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -740,6 +805,29 @@ MonoBehaviour:
     data1: 0
     data2: 0
   Exists: 1
+--- !u!114 &7124774587341140112
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Player/FallToDeath
+  m_EditorClassIdentifier: 
+  Path: event:/Player/FallToDeath
+  guid: c4eebfa4e81fff4ca1be2089d33d7497
+  Banks:
+  - {fileID: 1401611157603682647}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 1960
 --- !u!114 &8111547777741527603
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -809,3 +897,23 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 244
+--- !u!114 &9141093640552046081
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Glitch_Effect/IsGlitching
+  m_EditorClassIdentifier: 
+  Name: IsGlitching
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 0
+    data2: 0
+  Exists: 1

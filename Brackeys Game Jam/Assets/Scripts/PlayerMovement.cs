@@ -23,6 +23,9 @@ public class PlayerMovement : MonoBehaviour
     private string takeDamageElectricEvent;
     [FMODUnity.EventRef]
     [SerializeField]
+    private string takeDamageFallEvent;
+    [FMODUnity.EventRef]
+    [SerializeField]
     private string glitchEvent;
     [Range(1,0)]
     private float glitchFloat;
@@ -164,6 +167,7 @@ public class PlayerMovement : MonoBehaviour
     public void SetGlitching()
     {
         state = State.Glitching;
+        SetShader(0.5f,1);
         glitchFloat = 0;
         glitchEffectEvent = FMODUnity.RuntimeManager.CreateInstance(glitchEvent);
         glitchEffectEvent.setParameterByName("IsGlitching", glitchFloat);
@@ -178,9 +182,19 @@ public class PlayerMovement : MonoBehaviour
     public void SetNormal()
     {
         state = State.Normal;
+        SetShader(0.1f,0);
         glitchFloat = 1;
         glitchEffectEvent.setParameterByName("IsGlitching", glitchFloat);
         glitchEffectEvent.release();
+    }
+
+    void SetShader(float intensity, float interval)
+    {
+        var shader = Camera.main.GetComponent<GlitchCameraShader>();
+        shader.GlitchInterval = interval;
+        shader.WhiteNoiseIntensity = intensity;
+        shader.WaveNoiseIntensity = intensity;
+        shader.RGBShiftIntensity = intensity;
     }
 
     void CheckMovement(string left, string right)
@@ -313,6 +327,11 @@ public class PlayerMovement : MonoBehaviour
     public void TakeDamageElectricSound()
     {
         FMODUnity.RuntimeManager.PlayOneShot(takeDamageElectricEvent);
+    }
+
+    public void TakeDamageFallSound()
+    {
+        FMODUnity.RuntimeManager.PlayOneShot(takeDamageFallEvent);
     }
 
     private void OnCollisionEnter2D(Collision2D collision)

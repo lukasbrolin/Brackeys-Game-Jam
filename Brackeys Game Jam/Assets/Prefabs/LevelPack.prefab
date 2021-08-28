@@ -757,7 +757,7 @@ Transform:
   - {fileID: 2242476588619337095}
   - {fileID: 2242476589122289548}
   - {fileID: 7474421037707616576}
-  - {fileID: 2242476590386620313}
+  - {fileID: 2242476589558996300}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -772,7 +772,7 @@ GameObject:
   - component: {fileID: 2242476589558996300}
   - component: {fileID: 2242476589558996301}
   m_Layer: 0
-  m_Name: Ambience
+  m_Name: AmbienceSound
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -789,8 +789,8 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 2242476590386620313}
-  m_RootOrder: 0
+  m_Father: {fileID: 2242476589485448825}
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &2242476589558996301
 MonoBehaviour:
@@ -938,37 +938,6 @@ MonoBehaviour:
   timeInLevel: 0
   countTime: 0
   counter: {fileID: 2242476588716463656}
---- !u!1 &2242476590386620294
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 2242476590386620313}
-  m_Layer: 0
-  m_Name: SoundManager
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &2242476590386620313
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2242476590386620294}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 2242476589558996300}
-  m_Father: {fileID: 2242476589485448825}
-  m_RootOrder: 10
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2242476590468187011
 GameObject:
   m_ObjectHideFlags: 0
@@ -1227,6 +1196,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 30fe93322f3d7e54d8f5ed428d033408, type: 3}
+--- !u!224 &8879750466462640454 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 7659019407475970859, guid: 30fe93322f3d7e54d8f5ed428d033408, type: 3}
+  m_PrefabInstance: {fileID: 1256921642067622509}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &2242476589504326002 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 1040220468742198047, guid: 30fe93322f3d7e54d8f5ed428d033408, type: 3}
@@ -1238,11 +1212,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!224 &8879750466462640454 stripped
-RectTransform:
-  m_CorrespondingSourceObject: {fileID: 7659019407475970859, guid: 30fe93322f3d7e54d8f5ed428d033408, type: 3}
-  m_PrefabInstance: {fileID: 1256921642067622509}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &2242476590083483023
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1494,11 +1463,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8693243359484351351, guid: 5aea2ceb9ccf6e94ca0205f0fcc502da, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 10.69
+      value: 31.12
       objectReference: {fileID: 0}
     - target: {fileID: 8693243359484351351, guid: 5aea2ceb9ccf6e94ca0205f0fcc502da, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.31
+      value: 2.06
       objectReference: {fileID: 0}
     - target: {fileID: 8693243359484351351, guid: 5aea2ceb9ccf6e94ca0205f0fcc502da, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1669,6 +1638,10 @@ PrefabInstance:
       value: 1344
       objectReference: {fileID: 0}
     - target: {fileID: 8880601222214681735, guid: 34b347f7bc9c9b643a646b1e9bc230c6, type: 3}
+      propertyPath: takeDamageFallEvent
+      value: event:/Player/FallToDeath
+      objectReference: {fileID: 0}
+    - target: {fileID: 8880601222214681735, guid: 34b347f7bc9c9b643a646b1e9bc230c6, type: 3}
       propertyPath: takeDamageElectricEvent
       value: event:/Player/Take_DMG_Electric
       objectReference: {fileID: 0}
@@ -1708,11 +1681,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8693243359484351351, guid: 5aea2ceb9ccf6e94ca0205f0fcc502da, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 14.08
+      value: 15.48
       objectReference: {fileID: 0}
     - target: {fileID: 8693243359484351351, guid: 5aea2ceb9ccf6e94ca0205f0fcc502da, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.37
+      value: 5.61
       objectReference: {fileID: 0}
     - target: {fileID: 8693243359484351351, guid: 5aea2ceb9ccf6e94ca0205f0fcc502da, type: 3}
       propertyPath: m_LocalPosition.z

@@ -8,7 +8,7 @@ public class KillPlane : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            PlayerMovement.Instance.TakeDamageSound();
+            PlayerMovement.Instance.TakeDamageFallSound();
             LevelManager.Instance.RespawnPlayer();
         }
     }

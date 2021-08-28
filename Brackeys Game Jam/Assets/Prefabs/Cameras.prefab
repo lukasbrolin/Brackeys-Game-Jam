@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 6418709266809097972}
   - component: {fileID: 4908098152031793284}
   - component: {fileID: 3026783830146740141}
+  - component: {fileID: 6134707224381413303}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -148,6 +149,29 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   attenuationObject: {fileID: 0}
   ListenerNumber: -1
+--- !u!114 &6134707224381413303
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6418709266809097974}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 95b8081bfe3a22748bb3dab71ed16f59, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  GlitchInterval: 0
+  GlitchRate: 0
+  HorizontalResolution: 1920
+  VerticalResolution: 1080
+  WhiteNoiseIntensity: 0.1
+  WaveNoiseIntensity: 0.1
+  RGBShiftIntensity: 0.1
+  GlitchTint: {r: 1, g: 1, b: 1, a: 1}
+  EnableScanlineGlitch: 1
+  EnableBlockGlitch: 1
+  EnableShakeGlitch: 1
 --- !u!1 &6418709268076737587
 GameObject:
   m_ObjectHideFlags: 0

@@ -12,7 +12,7 @@ public class FallingObstacle : MonoBehaviour
     private string bumpEvent;
 
     private Vector3 lastPos;
-    private bool isGrounded;
+    public bool isGrounded;
     public bool isFalling;
     private Rigidbody2D rb;
     private Animator animator;
@@ -29,6 +29,11 @@ public class FallingObstacle : MonoBehaviour
     {
         StartCoroutine(GroundCheck());
         CheckFalling();
+        lastPos = transform.position;
+        if(lastPos.y <= transform.position.y + 0.2f && isGrounded)
+        {
+            isFalling = false;
+        }
     }
 
     void CheckFalling()
@@ -55,16 +60,16 @@ public class FallingObstacle : MonoBehaviour
         {
             FMODUnity.RuntimeManager.PlayOneShot(bumpEvent);
         }
-        if (!isGrounded && isFalling)
+        /*if (!isGrounded && isFalling)
         {
             if (collision.gameObject.CompareTag("Player"))
             {
-                FMODUnity.RuntimeManager.PlayOneShot(bumpEvent);
+                FMODUnity.RuntimeManager.PlayOneShot(bumpPlayerEvent);
                 PlayerMovement.Instance.TakeDamageSound();
                 LevelManager.Instance.RespawnPlayer();
                 Debug.Log("Carrot Hit");
             }
-        }
+        }*/
         
     }
 
