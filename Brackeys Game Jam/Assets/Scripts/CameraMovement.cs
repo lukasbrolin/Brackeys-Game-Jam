@@ -7,7 +7,6 @@ public class CameraMovement : MonoBehaviour
     private static CameraMovement _instance;
 
     public static CameraMovement Instance { get { return _instance; } }
-
     
     [SerializeField]
     private float increasedSpeed;
@@ -20,9 +19,14 @@ public class CameraMovement : MonoBehaviour
     private float minHeight, maxHeight;
     [SerializeField]
     public Vector3 startPos;
+    [SerializeField]
+    private Transform farBackground, middleBackground;
 
     [SerializeField]
     private bool isMoving;
+
+    private float lastXPos;
+    private Vector2 lastPos;
 
     public bool stopFollow;
     public bool centerPlayer;
@@ -39,22 +43,34 @@ public class CameraMovement : MonoBehaviour
         }
     }
 
-    // Start is called before the first frame update
     void Start()
     {
         startPos = CameraPos();
         transform.position = startPos;
+        lastXPos = transform.position.x;
+        farBackground.position = new Vector3(transform.position.x, farBackground.position.y,farBackground.position.z);
+        middleBackground.position = new Vector3(transform.position.x,middleBackground.position.y,middleBackground.position.z);
     }
 
-    // Update is called once per frame
     void Update()
     {
         if (!stopFollow)
         {
             DampMove();
             Move();
+            
+
         }
+        BackgroundFollow();
         CenterPlayer();
+    }
+
+    void BackgroundFollow()
+    {
+        Vector2 amountToMove = new Vector2(transform.position.x - lastPos.x, transform.position.y - lastPos.y);
+        farBackground.position = farBackground.position + new Vector3(amountToMove.x, amountToMove.y * 0.6f, 0f);
+        middleBackground.position += new Vector3(amountToMove.x, amountToMove.y, 0f) * .5f;
+        lastPos = transform.position;
     }
 
     void DampMove()

@@ -18,9 +18,6 @@ public class LevelManager : MonoBehaviour
 
     [SerializeField]
     private Text counter;
-
-    
-
     private void Awake()
     {
         if (_instance != null && _instance != this)

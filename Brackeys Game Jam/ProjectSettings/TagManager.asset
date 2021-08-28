@@ -3,7 +3,8 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Platform
   layers:
   - Default
   - TransparentFX
@@ -13,8 +14,8 @@ TagManager:
   - UI
   - Ground
   - Player
-  - 
-  - 
+  - Obstacle
+  - Glitch
   - 
   - 
   - 
@@ -38,11 +39,20 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: BG
+    uniqueID: 3864763975
+    locked: 0
   - name: Default
     uniqueID: 0
     locked: 0
   - name: Ground
     uniqueID: 1359484535
+    locked: 0
+  - name: Effects
+    uniqueID: 2484726399
+    locked: 0
+  - name: Obstacles
+    uniqueID: 3761772615
     locked: 0
   - name: Player
     uniqueID: 695681325

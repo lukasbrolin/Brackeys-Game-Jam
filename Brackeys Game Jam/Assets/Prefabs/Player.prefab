@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 8880601222214681735}
   - component: {fileID: 8880601222214681739}
   - component: {fileID: 8880601222214681738}
+  - component: {fileID: 110670216}
   m_Layer: 7
   m_Name: Player
   m_TagString: Player
@@ -86,6 +87,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c83899baaf9b91b4ab66f237c4d137db, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  jumpEvent: event:/Player/Jump
+  landingEvent: event:/Player/Land
+  takeDamageEvent: event:/Player/Take_DMG
+  glitchEvent: event:/Player/Glitch_Effect
   moveSpeed: 6
   keyCodes:
   - space
@@ -99,6 +104,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 64
   isGlitching: 0
+  stopInput: 0
 --- !u!114 &8880601222214681739
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -131,11 +137,32 @@ MonoBehaviour:
   - u
   - i
   - o
-  level: 3
+  - y
+  - h
+  - m
+  - n
+  - b
+  - g
+  - t
+  level: 1
   keyText:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
+--- !u!114 &110670216
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8880601222214681728}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86c6556701af9e04380698b89f691b6e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attenuationObject: {fileID: 0}
+  ListenerNumber: -1
 --- !u!1 &8880601222298417567
 GameObject:
   m_ObjectHideFlags: 0
@@ -147,6 +174,7 @@ GameObject:
   - component: {fileID: 8880601222298417566}
   - component: {fileID: 8880601222298417565}
   - component: {fileID: 8880601222298417564}
+  - component: {fileID: 1592212031}
   m_Layer: 7
   m_Name: Player_Sprite
   m_TagString: Untagged
@@ -206,7 +234,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 695681325
-  m_SortingLayer: 2
+  m_SortingLayer: 3
   m_SortingOrder: 0
   m_Sprite: {fileID: -8183738554837207194, guid: 87018508f19fe324fbda30b2eb5ac630, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -238,6 +266,19 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &1592212031
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8880601222298417567}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 81f4fdabd1999a34cade8ee26ffdba01, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  footStepEvent: event:/Player/Footsteps
 --- !u!1 &8880601222600191272
 GameObject:
   m_ObjectHideFlags: 0

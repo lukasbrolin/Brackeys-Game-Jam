@@ -105,7 +105,6 @@ public class PlayerMovement : MonoBehaviour
         spriteRenderer = GetComponentInChildren<SpriteRenderer>();
         randomizer = new Randomizer();
     }
-
     void Update()
     {
         if (!stopInput)
@@ -132,7 +131,6 @@ public class PlayerMovement : MonoBehaviour
         }
         
     }
-
     private void FixedUpdate()
     {
         switch (state)
@@ -146,7 +144,6 @@ public class PlayerMovement : MonoBehaviour
         }
         Movement();
     }
-
     private bool CheckKeys()
     {
         int counter = 0;
@@ -219,7 +216,6 @@ public class PlayerMovement : MonoBehaviour
             animator.SetBool("Rising", false);
             animator.SetBool("Falling", true);
         }
-        
     }
 
     void Movement()
@@ -257,7 +253,6 @@ public class PlayerMovement : MonoBehaviour
             DoubleJumpCheck();
         }
     }
-
 
     void DoubleJumpCheck()
     {
@@ -302,7 +297,6 @@ public class PlayerMovement : MonoBehaviour
         }
 
     }
-
     private void OnDrawGizmos()
     {
         Gizmos.DrawWireSphere(groundPos.position, 0.2f);
@@ -312,9 +306,6 @@ public class PlayerMovement : MonoBehaviour
     {
         FMODUnity.RuntimeManager.PlayOneShot(takeDamageEvent);
     }
-
-    
-
 }
 
 
