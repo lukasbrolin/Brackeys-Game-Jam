@@ -15,4 +15,9 @@ public class ElectricWater : MonoBehaviour
     {
         
     }
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        PlayerMovement.Instance.TakeDamageElectricSound();
+        LevelManager.Instance.RespawnPlayer();
+    }
 }

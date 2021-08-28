@@ -12,8 +12,7 @@ public class GlitchTrigger : MonoBehaviour
         {
             if (collision.tag.Equals("Player"))
             {
-                PlayerMovement pm = collision.GetComponent<PlayerMovement>();
-                pm.SetGlitching();
+                PlayerMovement.Instance.SetGlitching();
                 hasBeenTriggered = true;
             }
 

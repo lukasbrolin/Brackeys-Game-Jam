@@ -25,6 +25,7 @@ public class PlayerHealth : MonoBehaviour
         {
             //spriteRenderer.enabled = false;
             CameraMovement.Instance.Stop();
+            PlayerMovement.Instance.TakeDamageSound();
             LevelManager.Instance.RespawnPlayer();
         }
     }
