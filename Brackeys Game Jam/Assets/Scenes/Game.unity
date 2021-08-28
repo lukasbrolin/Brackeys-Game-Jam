@@ -4585,6 +4585,7 @@ GameObject:
   - component: {fileID: 1618134700}
   - component: {fileID: 1618134703}
   - component: {fileID: 1618134701}
+  - component: {fileID: 1618134704}
   m_Layer: 8
   m_Name: Obstacle
   m_TagString: Untagged
@@ -5054,6 +5055,25 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 64
   isFalling: 0
+--- !u!95 &1618134704
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1618134698}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: ffd32063440a74f4b8cd2e7e235f6c3e, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!224 &1634009550 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 7659019407475970859, guid: 30fe93322f3d7e54d8f5ed428d033408, type: 3}
