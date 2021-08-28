@@ -20,26 +20,6 @@ MonoBehaviour:
     data1: 0
     data2: 0
   Exists: 0
---- !u!114 &-9066086606066230344
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Music/MusicParts
-  m_EditorClassIdentifier: 
-  Name: MusicParts
-  Min: 0
-  Max: 4
-  Default: 0
-  ID:
-    data1: 0
-    data2: 0
-  Exists: 1
 --- !u!114 &-9032952503078170577
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -166,26 +146,6 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 88
---- !u!114 &-8358923298732649468
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Glitch_Effect/IsGlitching
-  m_EditorClassIdentifier: 
-  Name: IsGlitching
-  Min: 0
-  Max: 1
-  Default: 0
-  ID:
-    data1: 0
-    data2: 0
-  Exists: 1
 --- !u!114 &-8220589033477050127
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -206,6 +166,26 @@ MonoBehaviour:
     data1: 0
     data2: 0
   Exists: 0
+--- !u!114 &-8208401467089348898
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Music/MusicParts
+  m_EditorClassIdentifier: 
+  Name: MusicParts
+  Min: 0
+  Max: 4
+  Default: 0
+  ID:
+    data1: 0
+    data2: 0
+  Exists: 1
 --- !u!114 &-7989020711881885699
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -289,6 +269,26 @@ MonoBehaviour:
     data1: 0
     data2: 0
   Exists: 1
+--- !u!114 &-6635325677782084686
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Glitch_Effect/IsGlitching
+  m_EditorClassIdentifier: 
+  Name: IsGlitching
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 0
+    data2: 0
+  Exists: 1
 --- !u!114 &-6074437175859541132
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -352,7 +352,7 @@ MonoBehaviour:
   Is3D: 1
   IsOneShot: 0
   Parameters:
-  - {fileID: -8358923298732649468}
+  - {fileID: -6635325677782084686}
   MinDistance: 0
   MaxDistance: 0
   Length: 6000
@@ -503,7 +503,7 @@ MonoBehaviour:
   Path: FMOD/FMODproject/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 637657866163806931
+  lastModified: 637657828425574417
   LoadResult: 0
   FileSizes:
   - Name: Desktop
@@ -549,8 +549,8 @@ MonoBehaviour:
   Is3D: 0
   IsOneShot: 0
   Parameters:
-  - {fileID: -9066086606066230344}
-  - {fileID: 5679882376896326416}
+  - {fileID: -8208401467089348898}
+  - {fileID: 6724442444937835248}
   MinDistance: 0
   MaxDistance: 0
   Length: 84571
@@ -720,7 +720,7 @@ MonoBehaviour:
   - {fileID: 1401611157603682647}
   StringsBanks:
   - {fileID: -3258137026613632129}
-  stringsBankWriteTime: 637657866163806931
+  stringsBankWriteTime: 637657828425574417
   cacheVersion: 6
 --- !u!114 &70877068761729940
 MonoBehaviour:
@@ -800,7 +800,7 @@ MonoBehaviour:
   Path: FMOD/FMODproject/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 637657866163767040
+  lastModified: 637657828425544411
   LoadResult: 0
   FileSizes: []
   Exists: 1
@@ -1122,26 +1122,6 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 280
---- !u!114 &5679882376896326416
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Music/MusicVolume
-  m_EditorClassIdentifier: 
-  Name: MusicVolume
-  Min: 0
-  Max: 1
-  Default: 0.5
-  ID:
-    data1: 0
-    data2: 0
-  Exists: 1
 --- !u!114 &5977552766823100572
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1198,6 +1178,26 @@ MonoBehaviour:
   Min: 0
   Max: 3
   Default: 0
+  ID:
+    data1: 0
+    data2: 0
+  Exists: 1
+--- !u!114 &6724442444937835248
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Music/MusicVolume
+  m_EditorClassIdentifier: 
+  Name: MusicVolume
+  Min: 0
+  Max: 1
+  Default: 0.5
   ID:
     data1: 0
     data2: 0
