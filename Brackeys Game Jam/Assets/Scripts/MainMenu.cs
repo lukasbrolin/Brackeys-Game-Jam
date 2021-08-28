@@ -18,6 +18,7 @@ public class MainMenu : MonoBehaviour
     public void Play()
     {
         SceneManager.LoadScene(startScene);
+        SoundManager.Instance.SetFloat(1);
     }
 
     public void Exit()
