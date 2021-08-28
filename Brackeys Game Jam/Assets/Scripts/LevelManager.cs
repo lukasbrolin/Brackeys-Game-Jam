@@ -2,19 +2,24 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class LevelManager : MonoBehaviour
 {
 
     private static LevelManager _instance;
-
     public static LevelManager Instance { get { return _instance; } }
 
     public float waitToRespawn;
-
     public string levelToLoad;
-
     public float timeInLevel;
+
+    public bool countTime;
+
+    [SerializeField]
+    private Text counter;
+
+    
 
     private void Awake()
     {
@@ -30,13 +35,18 @@ public class LevelManager : MonoBehaviour
 
     void Start()
     {
+        countTime = true;
         timeInLevel = 0;
     }
 
     // Update is called once per frame
     void Update()
     {
-        timeInLevel += Time.deltaTime;
+        if (countTime)
+        {
+            timeInLevel += Time.deltaTime;
+            counter.text = Mathf.Abs(timeInLevel).ToString();
+        }
     }
 
     public void RespawnPlayer()

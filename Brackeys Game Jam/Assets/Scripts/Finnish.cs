@@ -9,6 +9,7 @@ public class Finnish : MonoBehaviour
         if (collision.tag.Equals("Player"))
         {
             LevelManager.Instance.EndLevel();
+            LevelManager.Instance.countTime = false;
         }
     }
 

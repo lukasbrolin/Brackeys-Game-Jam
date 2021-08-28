@@ -74,6 +74,7 @@ public class PlayerGlitch : MonoBehaviour
             Debug.Log(keyText[i]);
             //keyText[i].enabled = true;
             keyText[i].transform.parent.gameObject.SetActive(true);
+            keyText[i].transform.parent.gameObject.transform.parent.gameObject.SetActive(true);
         }
 
 
@@ -85,6 +86,7 @@ public class PlayerGlitch : MonoBehaviour
 
     void InvokeNormal()
     {
+        keyText[0].transform.parent.gameObject.transform.parent.gameObject.SetActive(false);
         PlayerMovement.Instance.SetNormal();
     }
 }
