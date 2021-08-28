@@ -20,6 +20,9 @@ public class PlayerMovement : MonoBehaviour
     private string takeDamageEvent;
     [FMODUnity.EventRef]
     [SerializeField]
+    private string takeDamageElectricEvent;
+    [FMODUnity.EventRef]
+    [SerializeField]
     private string glitchEvent;
     [Range(1,0)]
     private float glitchFloat;
@@ -305,6 +308,11 @@ public class PlayerMovement : MonoBehaviour
     public void TakeDamageSound()
     {
         FMODUnity.RuntimeManager.PlayOneShot(takeDamageEvent);
+    }
+
+    public void TakeDamageElectricSound()
+    {
+        FMODUnity.RuntimeManager.PlayOneShot(takeDamageElectricEvent);
     }
 }
 

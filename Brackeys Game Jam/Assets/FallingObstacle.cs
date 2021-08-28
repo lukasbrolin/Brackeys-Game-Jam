@@ -41,6 +41,7 @@ public class FallingObstacle : MonoBehaviour
         {
             if (collision.gameObject.CompareTag("Player"))
             {
+                LevelManager.Instance.RespawnPlayer();
                 Debug.Log("Carrot Hit");
             }
         }
