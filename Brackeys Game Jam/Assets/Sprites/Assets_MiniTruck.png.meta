@@ -1,7 +1,70 @@
 fileFormatVersion: 2
 guid: a4c1b7bdb549f8a47a67eeaf08dcd9d1
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: -1317404946745604342
+    second: Assets_MiniTruck_0
+  - first:
+      213: 4789518982541870909
+    second: Assets_MiniTruck_1
+  - first:
+      213: -7341648229382463839
+    second: Assets_MiniTruck_2
+  - first:
+      213: -5722288472428812691
+    second: Assets_MiniTruck_3
+  - first:
+      213: -7583637964119957238
+    second: Assets_MiniTruck_4
+  - first:
+      213: -7905986332696180016
+    second: Assets_MiniTruck_5
+  - first:
+      213: -6095241193572298641
+    second: Assets_MiniTruck_6
+  - first:
+      213: 5462323213300932119
+    second: Assets_MiniTruck_7
+  - first:
+      213: 1398528227584115884
+    second: Assets_MiniTruck_8
+  - first:
+      213: -5325878068555207843
+    second: Assets_MiniTruck_9
+  - first:
+      213: -2263089968832899395
+    second: Assets_MiniTruck_10
+  - first:
+      213: -5091831388819497564
+    second: Assets_MiniTruck_11
+  - first:
+      213: 8251091121595957347
+    second: Assets_MiniTruck_12
+  - first:
+      213: 3125712747660856299
+    second: Assets_MiniTruck_13
+  - first:
+      213: -88028408443148940
+    second: Assets_MiniTruck_14
+  - first:
+      213: -4357361802215692565
+    second: Assets_MiniTruck_15
+  - first:
+      213: 8204995010836716585
+    second: Assets_MiniTruck_16
+  - first:
+      213: 3477435770334387372
+    second: Assets_MiniTruck_17
+  - first:
+      213: 8862765816808403641
+    second: Assets_MiniTruck_18
+  - first:
+      213: -6644594776719439557
+    second: Assets_MiniTruck_19
+  - first:
+      213: 8201668025716923999
+    second: Assets_MiniTruck_20
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -41,12 +104,12 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 512
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -75,9 +138,486 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: Assets_MiniTruck_0
+      rect:
+        serializedVersion: 2
+        x: 63
+        y: 3281
+        width: 1965
+        height: 1300
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a07c2eb4e23a7bde0800000000000000
+      internalID: -1317404946745604342
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Assets_MiniTruck_1
+      rect:
+        serializedVersion: 2
+        x: 1932
+        y: 4576
+        width: 9
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d37066f732ac77240800000000000000
+      internalID: 4789518982541870909
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Assets_MiniTruck_2
+      rect:
+        serializedVersion: 2
+        x: 1960
+        y: 4575
+        width: 68
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1ae58c545d93d1a90800000000000000
+      internalID: -7341648229382463839
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Assets_MiniTruck_3
+      rect:
+        serializedVersion: 2
+        x: 2023
+        y: 3885
+        width: 6
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d66619ac3f85690b0800000000000000
+      internalID: -5722288472428812691
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Assets_MiniTruck_4
+      rect:
+        serializedVersion: 2
+        x: 1967
+        y: 3773
+        width: 11
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a01a673937181c690800000000000000
+      internalID: -7583637964119957238
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Assets_MiniTruck_5
+      rect:
+        serializedVersion: 2
+        x: 55
+        y: 3322
+        width: 11
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0da0d80715b484290800000000000000
+      internalID: -7905986332696180016
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Assets_MiniTruck_6
+      rect:
+        serializedVersion: 2
+        x: 2023
+        y: 3324
+        width: 7
+        height: 333
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f609bccad6a596ba0800000000000000
+      internalID: -6095241193572298641
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Assets_MiniTruck_7
+      rect:
+        serializedVersion: 2
+        x: 59
+        y: 1716
+        width: 1969
+        height: 1301
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 71e1c2995021ecb40800000000000000
+      internalID: 5462323213300932119
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Assets_MiniTruck_8
+      rect:
+        serializedVersion: 2
+        x: 1931
+        y: 3014
+        width: 10
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ca402856302986310800000000000000
+      internalID: 1398528227584115884
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Assets_MiniTruck_9
+      rect:
+        serializedVersion: 2
+        x: 1958
+        y: 3011
+        width: 70
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d5b29b64d1ea616b0800000000000000
+      internalID: -5325878068555207843
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Assets_MiniTruck_10
+      rect:
+        serializedVersion: 2
+        x: 2023
+        y: 2320
+        width: 6
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: db617f8e9a3e790e0800000000000000
+      internalID: -2263089968832899395
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Assets_MiniTruck_11
+      rect:
+        serializedVersion: 2
+        x: 1967
+        y: 2209
+        width: 11
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4adda3d545e2659b0800000000000000
+      internalID: -5091831388819497564
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Assets_MiniTruck_12
+      rect:
+        serializedVersion: 2
+        x: 55
+        y: 1759
+        width: 11
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3604b10b8a3c18270800000000000000
+      internalID: 8251091121595957347
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Assets_MiniTruck_13
+      rect:
+        serializedVersion: 2
+        x: 2023
+        y: 1760
+        width: 7
+        height: 332
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: beb4c3aee23c06b20800000000000000
+      internalID: 3125712747660856299
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Assets_MiniTruck_14
+      rect:
+        serializedVersion: 2
+        x: 59
+        y: 240
+        width: 1969
+        height: 1300
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4756a9001a247cef0800000000000000
+      internalID: -88028408443148940
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Assets_MiniTruck_15
+      rect:
+        serializedVersion: 2
+        x: 1932
+        y: 1535
+        width: 9
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: be6e315f68a8783c0800000000000000
+      internalID: -4357361802215692565
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Assets_MiniTruck_16
+      rect:
+        serializedVersion: 2
+        x: 1960
+        y: 1533
+        width: 68
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 92c56cc8d7ffdd170800000000000000
+      internalID: 8204995010836716585
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Assets_MiniTruck_17
+      rect:
+        serializedVersion: 2
+        x: 2023
+        y: 844
+        width: 6
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cac940ca865524030800000000000000
+      internalID: 3477435770334387372
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Assets_MiniTruck_18
+      rect:
+        serializedVersion: 2
+        x: 1967
+        y: 733
+        width: 11
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9b2f65ead8edefa70800000000000000
+      internalID: 8862765816808403641
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Assets_MiniTruck_19
+      rect:
+        serializedVersion: 2
+        x: 55
+        y: 281
+        width: 11
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b39c8315148a9c3a0800000000000000
+      internalID: -6644594776719439557
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Assets_MiniTruck_20
+      rect:
+        serializedVersion: 2
+        x: 2023
+        y: 283
+        width: 7
+        height: 333
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f5e59867d9d22d170800000000000000
+      internalID: 8201668025716923999
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []

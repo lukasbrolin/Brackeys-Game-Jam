@@ -314,6 +314,26 @@ public class PlayerMovement : MonoBehaviour
     {
         FMODUnity.RuntimeManager.PlayOneShot(takeDamageElectricEvent);
     }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("MovingPlatform"))
+        {
+            transform.parent = collision.transform;
+        }
+    }
+
+    private void OnCollisionExit2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("MovingPlatform"))
+        {
+            transform.parent = null;
+            if(transform.localScale.x == -1)
+            {
+                transform.localScale = new Vector2(1, 1);
+            }
+        }
+    }
 }
 
 
