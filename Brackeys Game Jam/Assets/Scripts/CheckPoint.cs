@@ -4,6 +4,10 @@ using UnityEngine;
 
 public class CheckPoint : MonoBehaviour
 {
+    [FMODUnity.EventRef]
+    [SerializeField]
+    private string cpEvent;
+
     [SerializeField]
     private SpriteRenderer spriteRenderer;
 
@@ -15,9 +19,12 @@ public class CheckPoint : MonoBehaviour
         Debug.Log(other);
         if (other.CompareTag("Player"))
         {
+            if(spriteRenderer.sprite == cpOff)
+            {
+                FMODUnity.RuntimeManager.PlayOneShot(cpEvent);
+            }
             Debug.Log("Match");
             CheckPointManager.Instance.DeactivateCheckpoints();
-
             spriteRenderer.sprite = cpOn;
 
             CheckPointManager.Instance.SetSpawnPoint(transform.position);

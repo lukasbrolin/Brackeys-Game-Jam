@@ -86,6 +86,26 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 398
+--- !u!114 &-7711625515177851170
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Glitch_Effect/IsGlitching
+  m_EditorClassIdentifier: 
+  Name: IsGlitching
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 0
+    data2: 0
+  Exists: 1
 --- !u!114 &-6047003517682293820
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -129,7 +149,7 @@ MonoBehaviour:
   Is3D: 1
   IsOneShot: 0
   Parameters:
-  - {fileID: 3878600589315148012}
+  - {fileID: -7711625515177851170}
   MinDistance: 0
   MaxDistance: 0
   Length: 6000
@@ -156,6 +176,49 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 101
+--- !u!114 &-5103168008269095948
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/UI/Checkpoint
+  m_EditorClassIdentifier: 
+  Path: event:/UI/Checkpoint
+  guid: 37d1f7e47767374186002e9c8fea0d90
+  Banks:
+  - {fileID: 1401611157603682647}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 1200
+--- !u!114 &-4432819497201212443
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Music/MusicVolume
+  m_EditorClassIdentifier: 
+  Name: MusicVolume
+  Min: 0
+  Max: 1
+  Default: 0.5
+  ID:
+    data1: 0
+    data2: 0
+  Exists: 1
 --- !u!114 &-3994014869683860673
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -217,11 +280,11 @@ MonoBehaviour:
   Path: FMOD/FMODproject/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 637657617026356611
+  lastModified: 637657664419012703
   LoadResult: 0
   FileSizes:
   - Name: Desktop
-    Value: 1374
+    Value: 1476
   Exists: 1
 --- !u!114 &-2557788219958219187
 MonoBehaviour:
@@ -243,7 +306,8 @@ MonoBehaviour:
   Is3D: 0
   IsOneShot: 0
   Parameters:
-  - {fileID: -2246014096705565884}
+  - {fileID: 3592369073148922884}
+  - {fileID: -4432819497201212443}
   MinDistance: 0
   MaxDistance: 0
   Length: 84571
@@ -385,12 +449,13 @@ MonoBehaviour:
   - {fileID: 3156862884714177746}
   - {fileID: -3994014869683860673}
   - {fileID: -3585800135017952033}
+  - {fileID: -5103168008269095948}
   EditorParameters: []
   MasterBanks:
   - {fileID: 1401611157603682647}
   StringsBanks:
   - {fileID: -3258137026613632129}
-  stringsBankWriteTime: 637657617026356611
+  stringsBankWriteTime: 637657664419012703
   cacheVersion: 6
 --- !u!114 &325376642126127215
 MonoBehaviour:
@@ -450,7 +515,7 @@ MonoBehaviour:
   Path: FMOD/FMODproject/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 637657617025588664
+  lastModified: 637657664418304598
   LoadResult: 0
   FileSizes: []
   Exists: 1
@@ -475,7 +540,7 @@ MonoBehaviour:
   IsOneShot: 0
   Parameters: []
   MinDistance: 1
-  MaxDistance: 5.2000003
+  MaxDistance: 9.8
   Length: 10000
 --- !u!114 &3019456471563996916
 MonoBehaviour:
@@ -521,8 +586,28 @@ MonoBehaviour:
   IsOneShot: 1
   Parameters: []
   MinDistance: 1
-  MaxDistance: 6.8
+  MaxDistance: 85
   Length: 428
+--- !u!114 &3592369073148922884
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Music/MusicParts
+  m_EditorClassIdentifier: 
+  Name: MusicParts
+  Min: 0
+  Max: 3
+  Default: 0
+  ID:
+    data1: 0
+    data2: 0
+  Exists: 1
 --- !u!114 &3878600589315148012
 MonoBehaviour:
   m_ObjectHideFlags: 0
