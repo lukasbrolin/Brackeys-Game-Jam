@@ -933,7 +933,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ed00a3adcca20094d94ec83d4b5e52dd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  waitToRespawn: 0.5
+  waitToRespawn: 1.5
   levelToLoad: Main_Menu
   timeInLevel: 0
   countTime: 0

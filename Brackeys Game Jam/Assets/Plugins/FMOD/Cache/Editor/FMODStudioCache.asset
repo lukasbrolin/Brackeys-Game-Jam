@@ -60,6 +60,26 @@ MonoBehaviour:
     data1: 0
     data2: 0
   Exists: 1
+--- !u!114 &-8898875966546797783
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Music/MusicVolume
+  m_EditorClassIdentifier: 
+  Name: MusicVolume
+  Min: 0
+  Max: 1
+  Default: 0.5
+  ID:
+    data1: 0
+    data2: 0
+  Exists: 0
 --- !u!114 &-8650750399473050677
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -189,6 +209,26 @@ MonoBehaviour:
     data1: 0
     data2: 0
   Exists: 1
+--- !u!114 &-6074437175859541132
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Glitch_Effect/IsGlitching
+  m_EditorClassIdentifier: 
+  Name: IsGlitching
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 0
+    data2: 0
+  Exists: 0
 --- !u!114 &-6047003517682293820
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -232,7 +272,7 @@ MonoBehaviour:
   Is3D: 1
   IsOneShot: 0
   Parameters:
-  - {fileID: 4367071240720273702}
+  - {fileID: 70877068761729940}
   MinDistance: 0
   MaxDistance: 0
   Length: 6000
@@ -363,7 +403,7 @@ MonoBehaviour:
   Path: FMOD/FMODproject/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 637657822511269890
+  lastModified: 637657829814897807
   LoadResult: 0
   FileSizes:
   - Name: Desktop
@@ -409,8 +449,8 @@ MonoBehaviour:
   Is3D: 0
   IsOneShot: 0
   Parameters:
-  - {fileID: -702150309293368887}
-  - {fileID: 5977552766823100572}
+  - {fileID: 4593569282887532800}
+  - {fileID: 7727787028573203819}
   MinDistance: 0
   MaxDistance: 0
   Length: 84571
@@ -580,8 +620,28 @@ MonoBehaviour:
   - {fileID: 1401611157603682647}
   StringsBanks:
   - {fileID: -3258137026613632129}
-  stringsBankWriteTime: 637657822511269890
+  stringsBankWriteTime: 637657829814897807
   cacheVersion: 6
+--- !u!114 &70877068761729940
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Glitch_Effect/IsGlitching
+  m_EditorClassIdentifier: 
+  Name: IsGlitching
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 0
+    data2: 0
+  Exists: 1
 --- !u!114 &325376642126127215
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -640,7 +700,7 @@ MonoBehaviour:
   Path: FMOD/FMODproject/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 637657822511229994
+  lastModified: 637657829814857914
   LoadResult: 0
   FileSizes: []
   Exists: 1
@@ -793,6 +853,26 @@ MonoBehaviour:
     data1: 0
     data2: 0
   Exists: 1
+--- !u!114 &4593569282887532800
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Music/MusicParts
+  m_EditorClassIdentifier: 
+  Name: MusicParts
+  Min: 0
+  Max: 4
+  Default: 0
+  ID:
+    data1: 0
+    data2: 0
+  Exists: 1
 --- !u!114 &5220254172544747524
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -902,6 +982,26 @@ MonoBehaviour:
     data1: 0
     data2: 0
   Exists: 1
+--- !u!114 &6132336009414093661
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Music/MusicParts
+  m_EditorClassIdentifier: 
+  Name: MusicParts
+  Min: 0
+  Max: 4
+  Default: 0
+  ID:
+    data1: 0
+    data2: 0
+  Exists: 0
 --- !u!114 &6619945583607020250
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -988,6 +1088,26 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 1960
+--- !u!114 &7727787028573203819
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Music/MusicVolume
+  m_EditorClassIdentifier: 
+  Name: MusicVolume
+  Min: 0
+  Max: 1
+  Default: 0.5
+  ID:
+    data1: 0
+    data2: 0
+  Exists: 1
 --- !u!114 &7853111445974416975
 MonoBehaviour:
   m_ObjectHideFlags: 0

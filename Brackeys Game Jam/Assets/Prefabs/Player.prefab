@@ -90,6 +90,8 @@ MonoBehaviour:
   jumpEvent: event:/Player/Jump
   landingEvent: event:/Player/Land
   takeDamageEvent: event:/Player/Take_DMG
+  takeDamageElectricEvent: 
+  takeDamageFallEvent: 
   glitchEvent: event:/Player/Glitch_Effect
   moveSpeed: 6
   keyCodes:
@@ -234,7 +236,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 695681325
-  m_SortingLayer: 3
+  m_SortingLayer: 4
   m_SortingOrder: 0
   m_Sprite: {fileID: -8183738554837207194, guid: 87018508f19fe324fbda30b2eb5ac630, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}

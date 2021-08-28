@@ -294,6 +294,9 @@
 		<property name="length">
 			<value>36.571428571428569</value>
 		</property>
+		<property name="triggerConditionMode">
+			<value>1</value>
+		</property>
 		<relationship name="timeline">
 			<destination>{7730168e-e027-4a32-995b-a60aa8995a8b}</destination>
 		</relationship>
