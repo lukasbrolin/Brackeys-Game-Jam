@@ -23,6 +23,7 @@ public class PlayerHealth : MonoBehaviour
 
         if (!isVisible)
         {
+            SoundManager.Instance.SetFloat(2);
             CameraMovement.Instance.Stop();
             PlayerMovement.Instance.TakeDamageSound();
             LevelManager.Instance.RespawnPlayer();

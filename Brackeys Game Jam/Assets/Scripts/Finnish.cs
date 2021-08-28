@@ -8,6 +8,7 @@ public class Finnish : MonoBehaviour
     {
         if (collision.tag.Equals("Player"))
         {
+            SoundManager.Instance.SetFloat(3);
             LevelManager.Instance.EndLevel();
             LevelManager.Instance.countTime = false;
         }

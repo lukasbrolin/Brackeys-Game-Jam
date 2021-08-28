@@ -2,12 +2,16 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+
 public class SoundManager : MonoBehaviour
 {
     private static SoundManager _instance;
     public static SoundManager Instance { get { return _instance; } }
 
-    [Range(0, 3)]
+    private FMOD.Studio.EventInstance playMusicEvent;
+
+    [Range(0,3)]
+    [SerializeField]
     public float index;
     [SerializeField]
     public float volume;
@@ -38,18 +42,24 @@ public class SoundManager : MonoBehaviour
 
     }
 
-    private void Update()
+    private void Start()
     {
         SetMusic();
     }
 
-    void SetMusic()
+    public void SetMusic()
     {
-        FMOD.Studio.EventInstance playMusicEvent;
+        playMusicEvent.release();
         playMusicEvent = FMODUnity.RuntimeManager.CreateInstance(musicEvent);
         playMusicEvent.setParameterByName("MusicParts", index);
-        playMusicEvent.setParameterByName("MusicVolume", volume);
         playMusicEvent.start();
-        //playMusicEvent.release();
+    }
+
+
+    public void SetFloat(float value)
+    {
+        index = value;
+        playMusicEvent.setParameterByName("MusicParts", index);
+        playMusicEvent.release();
     }
 }

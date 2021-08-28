@@ -134,6 +134,10 @@ PrefabInstance:
       propertyPath: level
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 2242476588828424413, guid: b09de9e20e08ad5458c83ce200f98196, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 7.79
+      objectReference: {fileID: 0}
     - target: {fileID: 2242476589485448806, guid: b09de9e20e08ad5458c83ce200f98196, type: 3}
       propertyPath: m_Name
       value: LevelPack
@@ -229,7 +233,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 321ca5504c974b84da3c5bfdee0404d4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  index: 0
+  index: 1
   volume: 0.5
   musicEvent: event:/Music/Music
 --- !u!4 &234269728
