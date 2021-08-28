@@ -12,17 +12,28 @@ public class FallingObstacle : MonoBehaviour
     private bool isGrounded;
     public bool isFalling;
     private Rigidbody2D rb;
+    private Animator animator;
     // Start is called before the first frame update
     void Start()
     {
         isFalling = false;
         rb = GetComponent<Rigidbody2D>();
+        animator = GetComponent<Animator>();
     }
 
     // Update is called once per frame
     void Update()
     {
         StartCoroutine(GroundCheck());
+        CheckFalling();
+    }
+
+    void CheckFalling()
+    {
+        if (isFalling)
+        {
+            animator.SetBool("Fallen", true);
+        }
     }
 
     IEnumerator GroundCheck()
