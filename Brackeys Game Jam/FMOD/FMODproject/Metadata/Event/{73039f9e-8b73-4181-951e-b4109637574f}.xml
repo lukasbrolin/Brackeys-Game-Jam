@@ -542,10 +542,10 @@
 	</object>
 	<object class="TransitionRegion" id="{3ac512a2-b402-4e62-acdc-c1195a28a1fb}">
 		<property name="position">
-			<value>27.428571428571423</value>
+			<value>20.571428571428569</value>
 		</property>
 		<property name="length">
-			<value>36.571428571428569</value>
+			<value>43.428571428571423</value>
 		</property>
 		<relationship name="timeline">
 			<destination>{7730168e-e027-4a32-995b-a60aa8995a8b}</destination>

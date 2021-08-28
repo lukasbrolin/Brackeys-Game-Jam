@@ -52,6 +52,8 @@ public class LevelManager : MonoBehaviour
     }
     private IEnumerator RespawnCo()
     {
+        
+
         PlayerMovement.Instance.gameObject.SetActive(false);
 
         yield return new WaitForSeconds(waitToRespawn);
@@ -63,6 +65,8 @@ public class LevelManager : MonoBehaviour
         CameraMovement.Instance.transform.position = CameraMovement.Instance.CameraPos();
 
         CameraMovement.Instance.Resume();
+
+        SoundManager.Instance.SetFloat(4);
 
     }
 
@@ -79,9 +83,17 @@ public class LevelManager : MonoBehaviour
 
         CameraMovement.Instance.centerPlayer = true;
 
-        yield return new WaitForSeconds(1.5f);
+        yield return new WaitForSeconds(5f);
 
         SceneManager.LoadScene(levelToLoad);
+        if (levelToLoad.Equals("Main_Menu"))
+        {
+            SoundManager.Instance.SetFloat(0);
+        }
+        else
+        {
+            SoundManager.Instance.SetFloat(1);
+        }
         if (PlayerPrefs.HasKey(SceneManager.GetActiveScene().name + "_time"))
         {
             if (timeInLevel < PlayerPrefs.GetFloat(SceneManager.GetActiveScene().name + "_time"))

@@ -47,7 +47,7 @@ public class SoundManager : MonoBehaviour
         SetMusic();
     }
 
-    public void SetMusic()
+    private void SetMusic()
     {
         playMusicEvent.release();
         playMusicEvent = FMODUnity.RuntimeManager.CreateInstance(musicEvent);
