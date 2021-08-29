@@ -14,26 +14,44 @@ public class MainMenu : MonoBehaviour
     private Text highScoreLevel2;
     [SerializeField]
     private Text highScoreLevel3;
+    [SerializeField]
+    private Text total;
 
     private float sum;
-
-    private void Update()
+    private void Start()
     {
         if (PlayerPrefs.GetFloat("Level_1" + "_time") != null)
         {
             sum += PlayerPrefs.GetFloat("Level_1" + "_time");
         }
-        else if(PlayerPrefs.GetFloat("Level_2" + "_time") != null)
+        else
+        {
+            sum = 0;
+        }
+        if (PlayerPrefs.GetFloat("Level_2" + "_time") != null)
         {
             sum += PlayerPrefs.GetFloat("Level_2" + "_time");
         }
-        else if (PlayerPrefs.GetFloat("Level_3" + "_time") != null)
+        else
+        {
+            sum = 0;
+        }
+        if (PlayerPrefs.GetFloat("Level_3" + "_time") != null)
         {
             sum += PlayerPrefs.GetFloat("Level_3" + "_time");
         }
-        highScoreLevel1.text = PlayerPrefs.GetFloat("Level_1" + "_time").ToString();
-        highScoreLevel2.text = PlayerPrefs.GetFloat("Level_2" + "_time").ToString();
-        highScoreLevel3.text = PlayerPrefs.GetFloat("Level_3" + "_time").ToString();
+        else
+        {
+            sum = 0;
+        }
+    }
+
+    private void Update()
+    {
+        highScoreLevel1.text = "Highscore Level 1: " + PlayerPrefs.GetFloat("Level_1" + "_time").ToString();
+        highScoreLevel2.text = "Highscore Level 2: " + PlayerPrefs.GetFloat("Level_2" + "_time").ToString();
+        highScoreLevel3.text = "Highscore Level 3: " + PlayerPrefs.GetFloat("Level_3" + "_time").ToString();
+        total.text = "Total time: " + sum.ToString();
 
     }
     public void Play()

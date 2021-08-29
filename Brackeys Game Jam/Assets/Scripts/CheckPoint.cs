@@ -16,14 +16,12 @@ public class CheckPoint : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        Debug.Log(other);
         if (other.CompareTag("Player"))
         {
             if(spriteRenderer.sprite == cpOff)
             {
                 FMODUnity.RuntimeManager.PlayOneShot(cpEvent);
             }
-            Debug.Log("Match");
             CheckPointManager.Instance.DeactivateCheckpoints();
             spriteRenderer.sprite = cpOn;
 

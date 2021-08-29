@@ -353,6 +353,11 @@ public class PlayerMovement : MonoBehaviour
             }
         }
     }
+
+    public void SetTriggerDeath()
+    {
+        animator.SetTrigger("Death");
+    }
 }
 
 

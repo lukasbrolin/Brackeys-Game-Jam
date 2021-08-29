@@ -52,13 +52,18 @@ public class LevelManager : MonoBehaviour
     }
     private IEnumerator RespawnCo()
     {
-        
 
-        PlayerMovement.Instance.gameObject.SetActive(false);
+        PlayerMovement.Instance.stopInput = true;
+
+        PlayerMovement.Instance.SetTriggerDeath();
+
+        //PlayerMovement.Instance.gameObject.SetActive(false);
 
         yield return new WaitForSeconds(waitToRespawn);
 
-        PlayerMovement.Instance.gameObject.SetActive(true);
+        PlayerMovement.Instance.stopInput = false;
+
+        //PlayerMovement.Instance.gameObject.SetActive(true);
 
         PlayerMovement.Instance.transform.position = CheckPointManager.Instance.spawnPoint;
 
