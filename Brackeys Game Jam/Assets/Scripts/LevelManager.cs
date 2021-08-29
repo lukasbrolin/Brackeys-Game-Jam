@@ -57,9 +57,17 @@ public class LevelManager : MonoBehaviour
 
         PlayerMovement.Instance.SetTriggerDeath();
 
+        yield return new WaitForSeconds(waitToRespawn - (1f / CanvasController.Instance.fadeSpeed));
+
         //PlayerMovement.Instance.gameObject.SetActive(false);
 
-        yield return new WaitForSeconds(waitToRespawn);
+        CanvasController.Instance.FadeToBlack();
+
+        yield return new WaitForSeconds((1f / CanvasController.Instance.fadeSpeed) + 0.2f);
+
+        CanvasController.Instance.FadeFromBlack();
+
+        //yield return new WaitForSeconds(waitToRespawn);
 
         PlayerMovement.Instance.stopInput = false;
 
@@ -89,6 +97,10 @@ public class LevelManager : MonoBehaviour
         CameraMovement.Instance.centerPlayer = true;
 
         yield return new WaitForSeconds(5f);
+
+        CanvasController.Instance.FadeToBlack();
+
+        yield return new WaitForSeconds((1f / CanvasController.Instance.fadeSpeed) + 3f);
 
         SceneManager.LoadScene(levelToLoad);
         if (levelToLoad.Equals("Main_Menu"))

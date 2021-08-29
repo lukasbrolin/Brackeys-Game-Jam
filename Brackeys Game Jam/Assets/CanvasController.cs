@@ -10,8 +10,7 @@ public class CanvasController : MonoBehaviour
 
     [SerializeField]
     private Image fadeScreen;
-    [SerializeField]
-    private float fadeSpeed;
+    public float fadeSpeed;
 
     private bool fadeToBlack, fadeFromBlack;
 
