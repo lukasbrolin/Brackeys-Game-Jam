@@ -8,6 +8,7 @@ public class PlayerHealth : MonoBehaviour
     [SerializeField]
     private Camera cam;
     private SpriteRenderer spriteRenderer;
+    public bool alive;
 
     void Start()
     {
@@ -19,13 +20,18 @@ public class PlayerHealth : MonoBehaviour
     {
         Vector2 vpPos = cam.WorldToViewportPoint(transform.position);
 
-        bool isVisible = vpPos.x < 1 && vpPos.x > 0 /*&& vpPos.y < 1 && vpPos.y > 0*/;
+        bool isVisible = vpPos.x < 1 && vpPos.x > 0;
 
-        if (!isVisible)
+        if (!isVisible && alive)
         {
+            alive = false;
             CameraMovement.Instance.Stop();
             PlayerMovement.Instance.TakeDamageSound();
             LevelManager.Instance.RespawnPlayer();
+        }
+        if (isVisible)
+        {
+            alive = true;
         }
     }
 }

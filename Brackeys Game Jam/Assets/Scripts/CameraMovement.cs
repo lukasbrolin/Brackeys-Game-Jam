@@ -93,7 +93,6 @@ public class CameraMovement : MonoBehaviour
     {
         if (isMoving)
         {
-            moveSpeed += 0.05f * Time.deltaTime;
             transform.position = new Vector3(transform.position.x + (moveSpeed * Time.deltaTime), transform.position.y, transform.position.z);
             Vector3 position = transform.position;
             position.y = Mathf.Clamp(PlayerMovement.Instance.transform.position.y, minHeight, maxHeight);

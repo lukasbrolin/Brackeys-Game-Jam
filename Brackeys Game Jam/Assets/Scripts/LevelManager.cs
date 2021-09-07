@@ -59,19 +59,13 @@ public class LevelManager : MonoBehaviour
 
         yield return new WaitForSeconds(waitToRespawn - (1f / CanvasController.Instance.fadeSpeed));
 
-        //PlayerMovement.Instance.gameObject.SetActive(false);
-
         CanvasController.Instance.FadeToBlack();
 
         yield return new WaitForSeconds((1f / CanvasController.Instance.fadeSpeed) + 0.2f);
 
         CanvasController.Instance.FadeFromBlack();
 
-        //yield return new WaitForSeconds(waitToRespawn);
-
         PlayerMovement.Instance.stopInput = false;
-
-        //PlayerMovement.Instance.gameObject.SetActive(true);
 
         PlayerMovement.Instance.transform.position = CheckPointManager.Instance.spawnPoint;
 
